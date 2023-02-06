@@ -10,31 +10,24 @@ import { ApiService } from './services/api.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  counter = 0;
+  title = 'R Y M';
+  // counter = 0;
 
-  increment() {
-    this.counter++;
-  }
+  // increment() {
+  //   this.counter++;
+  // }
 
-  decrement() {
-    this.counter--;
-  }
+  // decrement() {
+  //   this.counter--;
+  // }
 
-  form = new FormGroup({
-    name: new FormControl('', Validators.required), //esto tb se tiene que importar FormControl({}), y el validators
-    surname: new FormControl('', Validators.required),
-  }); //te pide importar FormGroup({})
+  // form = new FormGroup({
+  //   name: new FormControl('', Validators.required), //esto tb se tiene que importar FormControl({}), y el validators
+  //   surname: new FormControl('', Validators.required),
+  // }); //te pide importar FormGroup({})
 
-  characters$: Subscription;
-  characters: Characters = {} as Characters;
-
-  constructor(private service: ApiService) {
-    this.characters$ = this.service.getCharacters().subscribe((data) => {
-      this.characters = data;
-      console.log(data);
-    });
-    // this.characters$ = this.service.getCharacters().subscribe((data) => {
-    //   console.log(data);
-    // });
-  }
+  // this.characters$ = this.service.getCharacters().subscribe((data) => {
+  //   console.log(data);
+  // });
 }
+// }
