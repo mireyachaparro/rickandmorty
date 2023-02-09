@@ -1,17 +1,1 @@
-<h1>{{ counter }}</h1>
-<button (click)="decrement()">-</button>
-<button (click)="increment()">+</button>
-
-<form [formGroup]="form">
-  <label>Name:</label>
-  <input type="text" formControlName="name" />
-  <label>Surname:</label>
-  <input type="text" formControlName="surname" />
-</form>
-<ul>
-  <li *ngFor="let character of characters.results">
-    <p>{{ character.name }}</p>
-    <img [src]="character.image" alt="{{ character.name }} photo" />
-  </li>
-</ul>
 <router-outlet></router-outlet>

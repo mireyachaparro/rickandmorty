@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable, Subscribable, Subscription } from 'rxjs';
-import { Characters } from 'src/utils/interfaces';
-import { ApiService } from './services/api.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,31 +6,9 @@ import { ApiService } from './services/api.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  counter = 0;
+  title = 'R Y M';
 
-  increment() {
-    this.counter++;
-  }
-
-  decrement() {
-    this.counter--;
-  }
-
-  form = new FormGroup({
-    name: new FormControl('', Validators.required), //esto tb se tiene que importar FormControl({}), y el validators
-    surname: new FormControl('', Validators.required),
-  }); //te pide importar FormGroup({})
-
-  characters$: Subscription;
-  characters: Characters = {} as Characters;
-
-  constructor(private service: ApiService) {
-    this.characters$ = this.service.getCharacters().subscribe((data) => {
-      this.characters = data;
-      console.log(data);
-    });
-    // this.characters$ = this.service.getCharacters().subscribe((data) => {
-    //   console.log(data);
-    // });
-  }
+  // this.characters$ = this.service.getCharacters().subscribe((data) => {
+  //   console.log(data);
+  // });
 }
