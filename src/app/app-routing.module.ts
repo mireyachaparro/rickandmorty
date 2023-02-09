@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  {
-    path: 'details',
-    loadChildren: () =>
-      import('../app/details/details.module').then(
-        (module) => module.DetailsModule
-      ),
-  },
-];
+import { CharactersListComponent } from './characters-list/characters-list.component';
+import { DetailsComponent } from './details/details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot([
+      { path: '', component: CharactersListComponent },
+      { path: 'details/:id', component: DetailsComponent },
+      { path: '**', component: PageNotFoundComponent },
+    ]),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
