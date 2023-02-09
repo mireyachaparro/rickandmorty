@@ -1,7 +1,8 @@
 <ul>
   <li *ngFor="let character of characters.results">
     <p>{{ character.name }}</p>
-    <img [src]="character.image" alt="{{ character.name }} photo" />
+    <a routerLink="/details/{{ character.id }}"
+      ><img [src]="character.image" alt="{{ character.name }} photo"
+    /></a>
   </li>
 </ul>
-<router-outlet></router-outlet>
