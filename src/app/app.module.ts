@@ -8,9 +8,15 @@ import { AppComponent } from './app.component';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { DetailsComponent } from './details/details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
-  declarations: [AppComponent, CharactersListComponent, DetailsComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    CharactersListComponent,
+    DetailsComponent,
+    PageNotFoundComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   imports: [
@@ -18,6 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TableModule,
   ],
 })
 export class AppModule {}
