@@ -1,4 +1,4 @@
-<ul class="list-inline d-flex flex-wrap">
+<ul class="list-inline d-flex justify-content-around flex-wrap">
   <li *ngFor="let character of characters.results">
     <div class="card m-3" style="width: 18rem">
       <a routerLink="/details/{{ character.id }}"
@@ -13,63 +13,3 @@
     </div>
   </li>
 </ul>
-
-<!-- <p class="card-text">
-  Some quick example text to build on the card title and make up the bulk of the
-  card's content.
-</p> -->
-
-<table>
-  <!-- <ng-template pTemplate="caption"> -->
-  <div class="table-header">List of Customers</div>
-  <!-- </ng-template> -->
-  <!-- <ng-template pTemplate="header"> -->
-  <tr>
-    <th style="width: 3rem"></th>
-    <th>Name</th>
-    <th>Country</th>
-    <th>Representative</th>
-    <th>Date</th>
-    <th>Status</th>
-    <th>Activity</th>
-    <th></th>
-  </tr>
-  <tr class="p-selectable-row">
-    <td>
-      <!-- <p-tableCheckbox [value]="customer"></p-tableCheckbox> -->
-      <input type="checkbox" name="" id="" />
-    </td>
-    <td>
-      <span class="p-column-title">Name</span>
-      mireya
-    </td>
-    <td>
-      <span class="p-column-title">Country</span>
-      <span class="image-text">españa</span>
-    </td>
-    <td>
-      <span class="p-column-title">Representative</span>
-      <span class="image-text">maria</span>
-    </td>
-    <td>
-      <span class="p-column-title">Date</span>
-      15-04-99
-    </td>
-    <td>
-      <span class="p-column-title">Status</span>
-      vivo
-    </td>
-    <td>
-      <span class="p-column-title">Activity</span>
-      mucha
-    </td>
-    <td style="text-align: center">
-      <button
-        pButton
-        type="button"
-        class="p-button-secondary"
-        icon="pi pi-cog"
-      ></button>
-    </td>
-  </tr>
-</table>

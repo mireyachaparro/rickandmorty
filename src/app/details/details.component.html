@@ -1,17 +1,23 @@
-<div>{{ name }}</div>
-<div><img src="{{ image }}" alt="" width="300" /></div>
-<div>
-  <span>Gender: </span><span>{{ gender }}</span>
-</div>
-<div>
-  <span>Location: </span><span>{{ location }}</span>
-</div>
-<div>
-  <span>Origin: </span><span>{{ origin }}</span>
-</div>
-<div>
-  <span>Specie: </span><span>{{ species }}</span>
-</div>
-<div>
-  <span>Status: </span><span>{{ status }}</span>
+<div
+  class="d-flex flex-column align-items-center vh-100 justify-content-center"
+>
+  <div>
+    <p class="fs-2 fw-bold title">{{ name }}</p>
+  </div>
+  <div><img src="{{ image }}" alt="" width="300" /></div>
+  <div>
+    <span class="property fw-bold">Gender: </span><span>{{ gender }}</span>
+  </div>
+  <div>
+    <span class="property fw-bold">Location: </span><span>{{ location }}</span>
+  </div>
+  <div>
+    <span class="property fw-bold">Origin: </span><span>{{ origin }}</span>
+  </div>
+  <div>
+    <span class="property fw-bold">Specie: </span><span>{{ species }}</span>
+  </div>
+  <div>
+    <span class="property fw-bold">Status: </span><span>{{ status }}</span>
+  </div>
 </div>
