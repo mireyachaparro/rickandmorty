@@ -9,6 +9,7 @@ import { CharactersListComponent } from './characters-list/characters-list.compo
 import { DetailsComponent } from './details/details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TableModule } from 'primeng/table';
+import { LocationsComponent } from './locations/locations.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TableModule } from 'primeng/table';
     CharactersListComponent,
     DetailsComponent,
     PageNotFoundComponent,
+    LocationsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
