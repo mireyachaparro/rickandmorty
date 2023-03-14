@@ -1,0 +1,9 @@
+<ul class="list-inline d-flex justify-content-around flex-wrap">
+  <li *ngFor="let location of locations.results">
+    <div class="card m-3" style="width: 18rem">
+      <div class="card-body d-flex justify-content-center bg-secondary">
+        <p class="card-title text-light">{{ location.name }}</p>
+      </div>
+    </div>
+  </li>
+</ul>

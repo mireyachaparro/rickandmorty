@@ -20,8 +20,8 @@ export interface Result {
   species: Species;
   type: string;
   gender: Gender;
-  origin: Location;
-  location: Location;
+  origin: LocationIn;
+  location: LocationIn;
   image: string;
   episode: string[];
   url: string;
@@ -34,9 +34,25 @@ export enum Gender {
   Unknown = 'unknown',
 }
 
-export interface Location {
+export interface LocationIn {
   name: string;
   url: string;
+}
+
+export interface Location {
+  filter(arg0: (data: any) => boolean): any;
+  info: Info;
+  results: ResultLocation[];
+}
+
+export interface ResultLocation {
+  id: number;
+  name: string;
+  type: string;
+  dimension: string;
+  residents: Characters[];
+  url: string;
+  created: string;
 }
 
 export enum Species {
