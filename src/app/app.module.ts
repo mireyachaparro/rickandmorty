@@ -10,6 +10,7 @@ import { DetailsComponent } from './details/details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TableModule } from 'primeng/table';
 import { LocationsComponent } from './locations/locations.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LocationsComponent } from './locations/locations.component';
     DetailsComponent,
     PageNotFoundComponent,
     LocationsComponent,
+    NavbarComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
